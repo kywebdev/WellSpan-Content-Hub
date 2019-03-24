@@ -1,0 +1,116 @@
+/* HEADER */
+
+header {
+    background-color: $white;
+    padding: 30px 0px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid $light-gray;
+    transition: .3s ease-in-out;
+
+    .container {
+        max-width: none;
+    }
+    .logo {
+        width: 120px;
+        float: left;
+    }
+    .header-right {
+        float: right;
+
+        .back {
+            &:hover {
+                color: $blue;
+            }
+        }
+        .social {
+            float: right;
+            margin-left: -40px;
+
+            li {
+                list-style-type: none;
+                display: inline-block;
+                margin-left: 15px;
+
+                a {
+                    color: $dark-gray;
+                    font-size: 24px;
+                    padding: 10px;
+                    position: relative;
+                    top: 0px;
+                    transition: .2s ease-in-out;
+
+                    &:hover {
+                        color: $turquoise;
+                        top: -5px;
+                    }
+                }
+            }
+        }
+    }
+}
+.nav-up {
+    top: -130px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 940px) {
+    header {
+        .header-right {
+            .back {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 890px) {
+    header {
+        .header-right {
+            margin-top: -38px;
+            position: relative;
+            top: 20px;
+
+            .back {
+                margin-right: 0px;
+                float: none;
+            }
+            .social {
+                float: none;
+                text-align: right;
+            }
+        }
+    }
+}
+@media screen and (max-width: 660px) {
+    header {
+        .header-right {
+            top: 29px;
+            margin-top: -58px;
+
+            .back {
+                text-align: right;
+
+                .mobile-break {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 430px) {
+    header {
+        padding: 31px 0px 30px;
+
+        .logo {
+            width: 90px;
+            top: 8px;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

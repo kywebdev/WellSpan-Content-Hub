@@ -1,0 +1,72 @@
+/* HERO */
+
+.hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 127px;
+    padding: 80px 0px 140px;
+
+    &.care-for-all {
+        background-image: url('../img/care-for-all-img-1.jpg');
+    }
+    &.healthy-communities {
+        background-image: url('../img/healthy-communities-img-1.jpg');
+    }
+    &.lifelong-health {
+        background-image: url('../img/lifelong-health-img-1.jpg');
+    }
+    &.community {
+        background-image: url('../img/community-hero.jpg');
+    }
+    .container {
+        max-width: 1200px;
+    }
+    .subheading {
+        color: $white;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 190px;
+    }
+    h1 {
+        color: $white;
+        font-size: 46px;
+        font-weight: 600;
+        max-width: 700px;
+        width: 100%;
+        margin-top: 70px;
+        line-height: 60px;
+    }
+    .back {
+        color: $gold;
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 700px) {
+    .hero {
+        padding: 80px 0px 140px;
+
+        .subheading {
+            margin-top: 80px;
+        }
+        h1 {
+            font-size: 40px;
+            line-height: 50px;
+            margin-top: 40px;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .hero {
+        padding: 40px 0px 90px;
+
+        .subheading {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 30px;
+            line-height: 36px;
+            margin-top: 30px;
+        }
+    }
+}

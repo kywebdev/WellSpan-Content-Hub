@@ -1,0 +1,273 @@
+form {
+    &.search {
+        width: 50%;
+        max-width: 600px;
+        position: absolute;
+        right: calc(5% - 15px);
+        direction: rtl;
+        visibility: hidden;
+
+        input {
+            width: 0%;
+            padding: 10px 0px;
+            border: 1px solid transparent;
+            border-radius: 25px;
+            margin-top: 8px;
+            transition: .45s ease-in-out;
+            outline: none;
+            direction: ltr;
+            font-family: $myriad;
+            z-index: 4;
+            position: relative;
+
+            &::placeholder {
+                font-style: italic;
+                opacity: 0;
+                transition: .4s ease-in-out;
+            }
+        }
+        label {
+            display: none;
+        }
+        &.open {
+            visibility: visible;
+            input {
+                width: 100%;
+                padding: 10px 45px 10px 20px;
+                border: 1px solid gray;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+
+                &::placeholder {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.contact-module {
+    form {
+        div {
+            width: 100%;
+            margin-bottom: 50px;
+
+            &.half {
+                width: 45%;
+                float: left;
+
+                &:first-of-type {
+                    margin-right: 10%;
+                }
+            }
+            label {
+                display: block;
+                margin-bottom: 15px;
+                color: #d5d5d4;
+                transition: .3s ease-in-out;
+
+                &.label-focus {
+                    color: $dark-gray;
+                }
+            }
+            input, select {
+                width: 100%;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                border: none;
+                border-bottom: 2px solid #d5d5d4;
+                border-radius: 0px;
+                font-family: $myriad;
+                font-size: 30px;
+                padding: 0px 0px 10px;
+                outline: none;
+                transition: .3s ease-in-out;
+
+                &::placeholder {
+                    color: #d5d5d4;
+                    transition: .3s ease-in-out;
+                }
+                &:focus {
+                    border-bottom: 2px solid $dark-gray;
+                    color: $dark-gray;
+
+                    &::placeholder {
+                        color: $dark-gray;
+                    }
+                }
+            }
+            button {
+                display: inline-block;
+                vertical-align: middle;
+                -webkit-transform: perspective(1px) translateZ(0);
+                transform: perspective(1px) translateZ(0);
+                position: relative;
+                overflow: hidden;
+                background: $gold;
+                -webkit-transition-property: color;
+                transition-property: color;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                padding: 20px;
+                width: 100%;
+                text-align: center;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+                background: $gold;
+                text-decoration: none;
+                color: $white;
+                font-family: $myriad;
+                font-weight: bold;
+                font-size: 16px;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+
+                &:hover, &:focus, &:active {
+                    color: white;
+
+                    &:before {
+                        -webkit-transform: scale(2);
+                        transform: scale(2);
+                    }
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: lighten($gold, 3%);
+                    border-radius: 100%;
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    -webkit-transition-property: transform;
+                    transition-property: transform;
+                    -webkit-transition-duration: 0.4s;
+                    transition-duration: 0.4s;
+                    -webkit-transition-timing-function: ease-out;
+                    transition-timing-function: ease-out;
+                }
+            }
+            .selectric-wrapper {
+                margin-bottom: 0px;
+
+                div {
+                    margin-bottom: 0px;
+                }
+                .selectric {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 2px solid #d5d5d4;
+                    padding: 0px 0px 10px 0px;
+
+                    .label {
+                        color: #d5d5d4;
+                        font-size: 30px;
+                        font-family: $myriad;
+                        margin: 0px;
+                        padding-right: 40px;
+                        transition: .3s ease-in-out;
+                    }
+                    .button {
+                        background-color: transparent;
+
+                        &:after {
+                            border: none;
+                            background-image: url('../img/gray-arrow.png');
+                            background-repeat: no-repeat;
+                            width: 21px;
+                            height: 12px;
+                        }
+                    }
+                }
+                .selectric-items {
+                    border: 2px solid $dark-gray;
+                    display: block;
+                    opacity: 0;
+                    visibility: hidden;
+                    margin-top: -2px;
+                    box-shadow: none;
+                    background: $white;
+                    transition: .3s ease-in-out;
+
+                    li {
+                        color: $dark-gray;
+                        font-size: 20px;
+                        font-family: $myriad;
+                        color: #d5d5d4;
+                        line-height: 26px;
+                        transition: .3s ease-in-out;
+
+                        &:hover, &.selected, &.highlighted {
+                            background-color: #f1f1f1;
+                            color: $dark-gray;
+                        }
+                    }
+                    .disabled {
+                        color: #d5d5d4 !important;
+                        opacity: 1;
+                    }
+                }
+                &.selectric-open {
+                    .selectric {
+                        border-bottom: 2px solid $dark-gray;
+
+                        .label {
+                            color: $dark-gray;
+                        }
+                    }
+                    .selectric-items {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1000px) {
+    form {
+        &.search {
+            top: 7px;
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    form {
+        &.search {
+            input {
+                margin-right: 55px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .contact-module {
+        form {
+            div {
+                margin-bottom: 35px;
+
+                &.half {
+                    width: 100%;
+                    margin-right: 0% !important;
+                }
+                input {
+                    font-size: 26px;
+                }
+                .selectric-wrapper {
+                    .selectric {
+                        .label {
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

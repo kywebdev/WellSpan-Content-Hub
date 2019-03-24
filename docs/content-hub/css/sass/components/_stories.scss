@@ -1,0 +1,435 @@
+/* CALLOUTS */
+.stories {
+    margin-top: 30px;
+    width: 102%;
+
+    .story {
+        background-color: $white;
+        transition: .2s ease-in-out;
+        box-shadow: 0px 0px 50px rgba(50, 50, 50, .2);
+        width: 48%;
+        margin-bottom: 35px;
+
+        &.full {
+            .story-content {
+                padding: 40px 12% 60px;
+            }
+        }
+        &.half {
+            width: 23%;
+
+            .story-content {
+                padding: 10px 17% 40px;
+
+                .heading {
+                    font-size: 24px;
+                }
+            }
+        }
+        &.wide {
+            .story-content {
+                .heading {
+                    + .action-link {
+                        margin-top: -30px;
+                    }
+                }
+            }
+        }
+        &.video {
+            position: relative;
+
+            .story-img {
+                height: 100%;
+                position: relative;
+
+                img {
+                    height: 100%;
+                    margin-bottom: -4px;
+                }
+                &:after {
+                    content: '';
+                    background-image: url('../img/play-btn.png');
+                    width: 35px;
+                    height: 50px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: block;
+                }
+            }
+            .story-content {
+                position: absolute;
+                bottom: 15px;
+
+                .heading {
+                    color: $white;
+
+                    + .action-link {
+                        margin-top: -30px;
+                    }
+                }
+                .county {
+                    color: $white;
+                }
+            }
+        }
+        .story-img {
+            text-decoration: none;
+            position: relative;
+            display: block;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: .1s linear;
+            }
+            .corner-tag {
+                width: 120px;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
+        }
+        .story-content {
+            padding: 10px 12% 40px;
+
+            .county {
+                color: $gold;
+                font-size: 16px;
+
+                .date {
+                    color: $dark-gray;
+                    font-style: italic;
+                }
+                + {
+                    .heading {
+                        margin-top: -5px;
+                    }
+                }
+            }
+            .heading {
+                font-size: 30px;
+                font-weight: bold;
+                line-height: 32px;
+                color: #323232;
+                margin-top: 20px;
+
+                .subheading {
+                    font-size: 18px;
+                }
+            }
+            .btn {
+                font-size: 16px;
+                font-weight: bold;
+                width: auto;
+                padding: 18px 60px;
+            }
+            .action-link {
+                color: $turquoise;
+                position: relative;
+                left: 0px;
+                font-size: 16px;
+                margin-top: 10px;
+                display: inline-block;
+
+                &:after {
+                    content: url('../img/turquoise-arrow.png');
+                    margin-right: 20px;
+                    position: relative;
+                    top: 0px;
+                    left: 20px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    -webkit-transform: perspective(1px) translateZ(0);
+                    transform: perspective(1px) translateZ(0);
+                    box-shadow: 0 0 1px transparent;
+                }
+                &:hover {
+                    left: 3px;
+
+                    &:after {
+                        -webkit-animation-name: hang-sink-right, hang-right;
+                        animation-name: hang-sink-right, hang-right;
+                        -webkit-animation-duration: .3s, 1.5s;
+                        animation-duration: .3s, 1.5s;
+                        -webkit-animation-delay: 0s, .3s;
+                        animation-delay: 0s, .3s;
+                        -webkit-animation-timing-function: ease-out, ease-in-out;
+                        animation-timing-function: ease-out, ease-in-out;
+                        -webkit-animation-iteration-count: 1, infinite;
+                        animation-iteration-count: 1, infinite;
+                        -webkit-animation-fill-mode: forwards;
+                        animation-fill-mode: forwards;
+                        -webkit-animation-direction: normal, alternate;
+                        animation-direction: normal, alternate;
+                    }
+                }
+            }
+            .btn {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+.other-stories {
+    max-width: 1425px;
+    width: 90%;
+    margin: 120px auto 50px;
+    border-top: 1px solid #c9c9c8;
+
+    .heading {
+        h2 {
+            color: $dark-gray;
+            background-color: #f1f0ef;
+            padding-right: 20px;
+            position: relative;
+            top: -15px;
+            display: inline-block;
+            margin-bottom: 60px;
+        }
+    }
+    .story-modules {
+        display: flex;
+        flex-wrap: wrap;
+
+        .story {
+            background-color: $white;
+            transition: .2s ease-in-out;
+            box-shadow: 0px 0px 50px rgba(50, 50, 50, .2);
+            width: 30%;
+            margin-right: 5%;
+
+            &:last-of-type {
+                margin-right: 0%;
+            }
+            .story-img {
+                text-decoration: none;
+                position: relative;
+                display: block;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    transition: .1s linear;
+                }
+                .story-tag {
+                    position: absolute;
+                    top: 30px;
+                    left: 50px;
+                    color: $white;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+            }
+            .story-content {
+                padding: 10px 50px 40px;
+
+                .heading {
+                    font-size: 24px;
+                    font-weight: bold;
+                    line-height: 32px;
+                    color: #323232;
+                    margin-top: 20px;
+                }
+                .action-link {
+                    color: $turquoise;
+                    position: relative;
+                    left: 0px;
+                    font-size: 16px;
+                    margin-top: 10px;
+                    display: inline-block;
+
+                    &:after {
+                        content: url('../img/turquoise-arrow.png');
+                        margin-right: 20px;
+                        position: relative;
+                        top: 0px;
+                        left: 20px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        -webkit-transform: perspective(1px) translateZ(0);
+                        transform: perspective(1px) translateZ(0);
+                        box-shadow: 0 0 1px transparent;
+                    }
+                    &:hover {
+                        left: 3px;
+
+                        &:after {
+                            -webkit-animation-name: hang-sink-right, hang-right;
+                            animation-name: hang-sink-right, hang-right;
+                            -webkit-animation-duration: .3s, 1.5s;
+                            animation-duration: .3s, 1.5s;
+                            -webkit-animation-delay: 0s, .3s;
+                            animation-delay: 0s, .3s;
+                            -webkit-animation-timing-function: ease-out, ease-in-out;
+                            animation-timing-function: ease-out, ease-in-out;
+                            -webkit-animation-iteration-count: 1, infinite;
+                            animation-iteration-count: 1, infinite;
+                            -webkit-animation-fill-mode: forwards;
+                            animation-fill-mode: forwards;
+                            -webkit-animation-direction: normal, alternate;
+                            animation-direction: normal, alternate;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+    .other-stories {
+        .story-modules {
+            .story {
+                margin-right: 3%;
+                width: 31%;
+
+                .story-img {
+                    .story-tag {
+                        top: 10px;
+                        left: 30px;
+                    }
+                }
+                .story-content {
+                    padding: 0px 30px 25px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1100px) {
+    .stories {
+        display: block;
+        width: 104%;
+
+        .story {
+            width: 96%;
+
+            &.half {
+                width: 46%;
+            }
+            &.full {
+                .story-content {
+                    padding: 20px 12% 40px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .stories {
+        margin-top: -70px;
+
+        .story {
+            border-radius: 10px;
+
+            .story-img {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+                img {
+                    border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+                .corner-tag {
+                    border-top-right-radius: 10px !important;
+
+                    img {
+                        border-top-right-radius: 10px !important;
+                    }
+                }
+            }
+            &.video {
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+
+                .story-img {
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+        }
+    }
+    .other-stories {
+        margin: 60px auto 50px;
+
+        .story-modules {
+            .heading {
+                h2 {
+                    margin-bottom: 20px;
+                }
+            }
+            .story {
+                width: 100%;
+                margin-right: 0%;
+                margin-bottom: 30px;
+                border-radius: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0px;
+                }
+                .story-img {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .stories {
+        width: 100%;
+
+        .story {
+            margin-bottom: 30px !important;
+            width: 100%;
+
+            &.half {
+                width: 100%;
+                margin-right: 0%;
+            }
+            &.video {
+                .story-img {
+                    height: auto;
+                    border-bottom-left-radius: 0px;
+                    border-bottom-right-radius: 0px;
+
+                    img {
+                        height: auto;
+                    }
+                }
+                .story-content {
+                    position: relative;
+                    bottom: auto;
+
+                    .heading {
+                        color: $dark-gray;
+                    }
+                }
+            }
+            .story-img {
+                .corner-tag {
+                    width: 90px;
+                }
+            }
+            .story-content {
+                padding: 10px 30px 30px !important;
+
+                .county {
+                    margin-bottom: 10px;
+
+                    + .heading {
+                        margin-bottom: 15px;
+                    }
+                }
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
