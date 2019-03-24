@@ -1,1 +1,1 @@
-# WellSpan-Content-Hub
+# WellSpan Content Hub
